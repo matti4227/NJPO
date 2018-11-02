@@ -6,14 +6,9 @@ public class Tab {
 
     private int tab[];
 
-    Tab(int size){
-        initializeTab(size);
-        fillTheTab(size);
-    }
+    void initializeTab(int size) { tab = new int[size]; }
 
-    void initializeTab(int size){ tab = new int[size]; }
-
-    void fillTheTab(int size){
+    void fillTheTab(int size) {
         Random random = new Random();
         for(int i = 0; i < size; i++)
             tab[i] = random.nextInt(size);
@@ -23,7 +18,7 @@ public class Tab {
         return tab;
     }
 
-    public String showTab(){
+    public String showTab() {
         StringBuilder sb = new StringBuilder();
         for(int t : tab){
             sb.append(tab[t]);

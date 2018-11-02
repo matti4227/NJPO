@@ -2,8 +2,16 @@ package sortingmethods;
 
 public class QuickSort extends SortingAlgorithm {
 
+    private static QuickSort instance = new QuickSort();
+
+    private QuickSort() {}
+
+    public static QuickSort getInstance() { return instance; }
+
     private int low;
     private int high;
+    private long sortingDuration;
+    private long sortingDuration10;
 
     public QuickSort(Tab tabToSort, int low, int high) {
         initializeTab(tabToSort);
@@ -19,9 +27,15 @@ public class QuickSort extends SortingAlgorithm {
     void initializeTab(Tab tabToSort) { tab = tabToSort.getTab(); }
 
     @Override
-    public int[] sort(){
+    public void sort(String ile) {
+
+        long startTime = System.nanoTime();
         quickSort(tab, low, high);
-        return tab;
+        long endTime = System.nanoTime();
+        if(ile == "raz")
+            sortingDuration = (endTime - startTime);
+        if(ile == "dziesięć")
+            sortingDuration10 += (endTime - startTime);
     }
 
     public void quickSort(int tabToSort[], int low, int high) {
@@ -55,5 +69,23 @@ public class QuickSort extends SortingAlgorithm {
         arr[high] = temp;
 
         return i+1;
+    }
+
+    @Override
+    public String getSortingDuration() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(sortingDuration);
+        sb.append(" ns");
+        return String.valueOf(sb);
+    }
+
+    @Override
+    public String getSortingDuration10() {
+        sortingDuration10 /= 10;
+        StringBuilder sb = new StringBuilder();
+        sb.append(sortingDuration10);
+        sb.append(" ns");
+        sortingDuration10 = 0;
+        return String.valueOf(sb);
     }
 }
