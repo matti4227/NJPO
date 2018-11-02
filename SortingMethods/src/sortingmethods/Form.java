@@ -70,6 +70,9 @@ public class Form extends JFrame {
                     JOptionPane.showMessageDialog(null, "A może coś wpisz");
                 }
 
+                if(numbers)
+                    JOptionPane.showMessageDialog(null, creator.showTab());
+
 //                    JOptionPane.showMessageDialog(null, tab1.showTab() + duration + " ns");
 //                }
 //                else {
@@ -94,6 +97,9 @@ public class Form extends JFrame {
                     java1.setText(javaSort.getSortingDuration());
                 else
                     java1.setText("0 ns");
+
+                if(numbers)
+                    JOptionPane.showMessageDialog(null, creator.showTab());
             }
         });
         sortuj1_10.addActionListener(new ActionListener() {
@@ -113,6 +119,9 @@ public class Form extends JFrame {
                     java1_10.setText(javaSort.getSortingDuration10());
                 else
                     java1_10.setText("0 ns");
+
+                if(numbers)
+                    JOptionPane.showMessageDialog(null, creator.showTab());
             }
         });
         bubbleCheck.addItemListener(new ItemListener() {
@@ -165,19 +174,15 @@ public class Form extends JFrame {
                 java1_10.setText("0 ns");
             }
         });
-//        pokazCheck.addItemListener(new ItemListener() {///////////////////////////////////////////////////////////////TODO: może to dodać, a może nie
-//            @Override
-//            public void itemStateChanged(ItemEvent e) {
-//                if(e.getStateChange() == 1) {
-//                    creator.addAlgorithm(javaSort);
-//                    numbers = true;
-//                }
-//                else {
-//                    creator.removeAlgorithm(javaSort);
-//                    numbers = false;
-//                }
-//            }
-//        });
+        pokazCheck.addItemListener(new ItemListener() {///////////////////////////////////////////////////////////////TODO: może to dodać, a może nie
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if(e.getStateChange() == 1)
+                    numbers = true;
+                else
+                    numbers = false;
+            }
+        });
     }
 
     private boolean checkNumber(String input){

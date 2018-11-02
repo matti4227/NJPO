@@ -25,7 +25,6 @@ public class Tab {
             sb.append(" ");
         }
 
-
         return sb.toString();
     }
 }

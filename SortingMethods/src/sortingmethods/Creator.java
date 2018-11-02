@@ -38,4 +38,15 @@ public class Creator {
                 ob2.sort(ile);
             }
     }
+
+    public String showTab() {
+        StringBuilder sb = new StringBuilder();
+        int []tempTab = tab.getTab();
+        for(int t : tempTab){
+            sb.append(tempTab[t]);
+            sb.append(" ");
+        }
+
+        return sb.toString();
+    }
 }

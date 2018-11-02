@@ -13,18 +13,8 @@ public class QuickSort extends SortingAlgorithm {
     private long sortingDuration;
     private long sortingDuration10;
 
-    public QuickSort(Tab tabToSort, int low, int high) {
-        initializeTab(tabToSort);
-        initializeLowHigh(low, high);
-    }
-
-    private void initializeLowHigh(int low, int high) {
-        this.low = low;
-        this.high = high;
-    }
-
     @Override
-    void initializeTab(Tab tabToSort) { tab = tabToSort.getTab(); }
+    void initializeTab(Tab tabToSort) { tab = tabToSort.getTab(); low = 0; high = tabToSort.getTab().length - 1; }
 
     @Override
     public void sort(String ile) {
