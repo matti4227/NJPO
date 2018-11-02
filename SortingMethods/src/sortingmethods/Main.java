@@ -23,6 +23,10 @@ public class Main {
 //        js.sort();
 //        System.out.println("\n");
 //        tab3.showTab();
+
+        Form form = new Form();
+        form.setDefaultCloseOperation(form.EXIT_ON_CLOSE);
+        form.setVisible(true);
     }
 }
 

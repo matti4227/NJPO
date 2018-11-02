@@ -23,8 +23,14 @@ public class Tab {
         return tab;
     }
 
-    public void showTab(){
-        for(int t : tab)
-            System.out.println(tab[t]);
+    public String showTab(){
+        StringBuilder sb = new StringBuilder();
+        for(int t : tab){
+            sb.append(tab[t]);
+            sb.append(" ");
+        }
+
+
+        return sb.toString();
     }
 }
