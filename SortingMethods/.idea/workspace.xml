@@ -3,9 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="c99f9665-9bbb-4de3-983e-3c5597b0bf94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Observer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Observer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sortingmethods/Creator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sortingmethods/Creator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Form.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Tab.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingMethods/sortingmethods/Tab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sortingmethods/Form.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/sortingmethods/Form.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sortingmethods/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sortingmethods/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sortingmethods/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sortingmethods/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sortingmethods/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sortingmethods/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sortingmethods/Tab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sortingmethods/Tab.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,32 +31,34 @@
     <session id="753287164">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="form" value="7" />
-          <entry key="java" value="30" />
+          <entry key="java" value="33" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="7" />
-          <entry key="JAVA" value="30" />
+          <entry key="JAVA" value="33" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4263" />
+          <entry key="java" value="4868" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4263" />
+          <entry key="JAVA" value="4868" />
         </counts>
       </usages-collector>
     </session>
@@ -55,35 +69,19 @@
         <entry file="file://$PROJECT_DIR$/src/sortingmethods/SortingAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sortingmethods/QuickSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="108" selection-start-line="16" selection-start-column="108" selection-end-line="16" selection-end-column="108" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sortingmethods/Creator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state relative-caret-position="181">
+              <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#309#310#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#500#501#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#631#632#0" expanded="true" />
+                <element signature="method#showTab#0;class#Creator#0" />
               </folding>
             </state>
           </provider>
@@ -92,10 +90,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sortingmethods/Form.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1519">
-              <caret line="123" column="75" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
+            <state relative-caret-position="218">
+              <caret line="132" column="60" lean-forward="true" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#4811:5224" />
+                <element signature="class#5266:5675" />
+                <element signature="class#5716:6121" />
+                <element signature="class#3576:3946" />
+                <element signature="class#6586:6842" />
+                <element signature="e#5842#6455#0" />
                 <element signature="method#checkNumber#0;class#Form#0" />
               </folding>
             </state>
@@ -108,10 +112,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sortingmethods/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sortingmethods/BubbleSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="405">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sortingmethods/QuickSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -119,8 +141,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sortingmethods/JavaSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+            <state relative-caret-position="292">
+              <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -128,8 +150,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sortingmethods/Tab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="204">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="method#fillTheTab#0;class#Tab#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,16 +175,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sortingmethods/Main.java" />
         <option value="$PROJECT_DIR$/src/sortingmethods/TabSize.java" />
-        <option value="$PROJECT_DIR$/src/sortingmethods/BubbleSort.java" />
         <option value="$PROJECT_DIR$/src/sortingmethods/SortingAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/sortingmethods/JavaSort.java" />
-        <option value="$PROJECT_DIR$/src/sortingmethods/Form.form" />
         <option value="$PROJECT_DIR$/src/sortingmethods/Tab.java" />
-        <option value="$PROJECT_DIR$/src/sortingmethods/Creator.java" />
-        <option value="$PROJECT_DIR$/src/sortingmethods/Form.java" />
+        <option value="$PROJECT_DIR$/src/sortingmethods/Main.java" />
         <option value="$PROJECT_DIR$/src/sortingmethods/QuickSort.java" />
+        <option value="$PROJECT_DIR$/src/sortingmethods/JavaSort.java" />
+        <option value="$PROJECT_DIR$/src/sortingmethods/BubbleSort.java" />
+        <option value="$PROJECT_DIR$/src/sortingmethods/Creator.java" />
+        <option value="$PROJECT_DIR$/src/sortingmethods/Form.form" />
+        <option value="$PROJECT_DIR$/src/sortingmethods/Form.java" />
       </list>
     </option>
   </component>
@@ -169,9 +194,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="931" />
-    <option name="width" value="516" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1020" />
     <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -180,6 +205,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,26 +224,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sortingmethods" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SortingMethods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SortingMethods" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sortingmethods" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="e9f4de52:FormNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="133" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541198507662" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541242514900" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -257,45 +275,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541167166370</updated>
-      <workItem from="1541167171818" duration="30767000" />
+      <workItem from="1541167171818" duration="31217000" />
+      <workItem from="1541234005115" duration="8391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30767000" />
+    <option name="totallyTimeSpent" value="39608000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-7" y="0" width="1020" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14971347" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.31454006" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32614556" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32884097" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22102426" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22373806" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32614556" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,50 +331,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sortingmethods/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/sortingmethods/a.java" />
+    <entry file="file://$PROJECT_DIR$/src/sortingmethods/SortingAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sortingmethods/a.java">
+    <entry file="file://$PROJECT_DIR$/src/sortingmethods/Tab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="method#fillTheTab#0;class#Tab#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sortingmethods/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sortingmethods/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sortingmethods/JavaSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sortingmethods/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sortingmethods/Form.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sortingmethods/SortingAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sortingmethods/BubbleSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sortingmethods/Tab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sortingmethods/Form.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1519">
-          <caret line="123" column="75" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
+        <state relative-caret-position="218">
+          <caret line="132" column="60" lean-forward="true" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#4811:5224" />
+            <element signature="class#5266:5675" />
+            <element signature="class#5716:6121" />
+            <element signature="class#3576:3946" />
+            <element signature="class#6586:6842" />
+            <element signature="e#5842#6455#0" />
             <element signature="method#checkNumber#0;class#Form#0" />
           </folding>
         </state>
@@ -363,33 +413,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sortingmethods/Creator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        <state relative-caret-position="181">
+          <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
+            <element signature="method#showTab#0;class#Creator#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sortingmethods/JavaSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sortingmethods/QuickSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="108" selection-start-line="16" selection-start-column="108" selection-end-line="16" selection-end-column="108" />
         </state>
       </provider>
     </entry>

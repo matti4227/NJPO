@@ -5,21 +5,15 @@ import java.awt.event.*;
 
 public class Form extends JFrame {
     private JPanel jPanel;
-    private JButton stwórzTablicęButton3;
-    private JTextField textField1;
-    private JButton stwórzTablicęButton2;
-    private JTextField textField2;
-    private JButton stwórzTablicęButton1;
-    private JTextField textField3;
-    private JButton stwórzTablicęButton;
+    private JButton stworzTab2;
+    private JTextField tablica2;
+    private JButton stworzTab1;
     private JTextField tablica1;
     private JLabel jLabel1;
     private JButton infoOProgramieButton;
     private JLabel jLabel2;
     private JButton sortuj1;
-    private JButton sortujButton1;
-    private JButton sortujButton2;
-    private JButton sortujButton3;
+    private JButton sortuj2;
     private JLabel bubble1;
     private JLabel quick1;
     private JLabel java1;
@@ -33,6 +27,15 @@ public class Form extends JFrame {
     private JButton wyczyśćWynikiButton;
     private JLabel info;
     private JCheckBox pokazCheck;
+    private JLabel infoTablica1;
+    private JLabel infoTablica2;
+    private JLabel bubble2;
+    private JLabel quick2;
+    private JLabel java2;
+    private JButton sortuj2_10;
+    private JLabel bubble2_10;
+    private JLabel quick2_10;
+    private JLabel java2_10;
 
     Form(){
         add(jPanel);
@@ -47,83 +50,15 @@ public class Form extends JFrame {
         quickSort = QuickSort.getInstance();
         javaSort = JavaSort.getInstance();
 
-        stwórzTablicęButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        stworzTab1.addActionListener(e -> createTable(tablica1, infoTablica1));
+        stworzTab2.addActionListener(e -> createTable(tablica2, infoTablica2));
 
-                String text = tablica1.getText();
+        sortuj1.addActionListener(e -> sortTable(bubble1, quick1, java1));
+        sortuj2.addActionListener(e -> sortTable(bubble2, quick2, java2));
 
-                if(!text.equals("")){
-                    if(checkNumber(text)){
-                        int tabSize = Integer.parseInt(text);
-                        if(tabSize != 0){
-                            creator.initializeTab(tabSize);
-                            creator.fillTheTab(tabSize);
-                            table = true;
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Podaj coś, co nie jest zerem");
-                        }
-                    } else {
-                        JOptionPane.showMessageDialog(null, "To nie jest liczba, bądź wykracza poza możliwy zakres");
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(null, "A może coś wpisz");
-                }
+        sortuj1_10.addActionListener(e -> sortTable10(bubble1_10, quick1_10, java1_10));
+        sortuj2_10.addActionListener(e -> sortTable10(bubble2_10, quick2_10, java2_10));
 
-                if(numbers)
-                    JOptionPane.showMessageDialog(null, creator.showTab());
-
-//                    JOptionPane.showMessageDialog(null, tab1.showTab() + duration + " ns");
-//                }
-//                else {
-//                    JOptionPane.showMessageDialog(null, "To nie jest liczba, bądź wykracza poza możliwy zakres");
-
-            }
-        });
-        sortuj1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(table)
-                    creator.notifyObservers("raz");
-                if(bubbleFlag)
-                    bubble1.setText(bubbleSort.getSortingDuration());
-                else
-                    bubble1.setText("0 ns");
-                if(quickFlag)
-                    quick1.setText(quickSort.getSortingDuration());
-                else
-                    quick1.setText("0 ns");
-                if(javaFlag)
-                    java1.setText(javaSort.getSortingDuration());
-                else
-                    java1.setText("0 ns");
-
-                if(numbers)
-                    JOptionPane.showMessageDialog(null, creator.showTab());
-            }
-        });
-        sortuj1_10.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(table)
-                    creator.notifyObservers("dziesięć");
-                if(bubbleFlag)
-                    bubble1_10.setText(bubbleSort.getSortingDuration10());
-                else
-                    bubble1_10.setText("0 ns");
-                if(quickFlag)
-                    quick1_10.setText(quickSort.getSortingDuration10());
-                else
-                    quick1_10.setText("0 ns");
-                if(javaFlag)
-                    java1_10.setText(javaSort.getSortingDuration10());
-                else
-                    java1_10.setText("0 ns");
-
-                if(numbers)
-                    JOptionPane.showMessageDialog(null, creator.showTab());
-            }
-        });
         bubbleCheck.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -172,9 +107,15 @@ public class Form extends JFrame {
                 bubble1_10.setText("0 ns");
                 quick1_10.setText("0 ns");
                 java1_10.setText("0 ns");
+                bubble2.setText("0 ns");
+                quick2.setText("0 ns");
+                java2.setText("0 ns");
+                bubble2_10.setText("0 ns");
+                quick2_10.setText("0 ns");
+                java2_10.setText("0 ns");
             }
         });
-        pokazCheck.addItemListener(new ItemListener() {///////////////////////////////////////////////////////////////TODO: może to dodać, a może nie
+        pokazCheck.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if(e.getStateChange() == 1)
@@ -185,6 +126,76 @@ public class Form extends JFrame {
         });
     }
 
+    private void sortTable(JLabel bubble, JLabel quick, JLabel java) {
+        if(table)
+            creator.notifyObservers("raz");
+        if(bubbleFlag)
+            bubble.setText(bubbleSort.getSortingDuration());
+        else
+            bubble.setText("0 ns");
+        if(quickFlag)
+            quick.setText(quickSort.getSortingDuration());
+        else
+            quick.setText("0 ns");
+        if(javaFlag)
+            java.setText(javaSort.getSortingDuration());
+        else
+            java.setText("0 ns");
+
+
+        if(numbers)
+            JOptionPane.showMessageDialog(null, creator.showTab());
+    }
+    private void sortTable10(JLabel bubble, JLabel quick, JLabel java) {
+        if(table)
+            creator.notifyObservers("dziesięć");
+        if(bubbleFlag)
+            bubble.setText(bubbleSort.getSortingDuration10());
+        else
+            bubble.setText("0 ns");
+        if(quickFlag)
+            quick.setText(quickSort.getSortingDuration10());
+        else
+            quick.setText("0 ns");
+        if(javaFlag)
+            java.setText(javaSort.getSortingDuration10());
+        else
+            java.setText("0 ns");
+
+
+        if(numbers)
+            JOptionPane.showMessageDialog(null, creator.showTab());
+    }
+    private void createTable(JTextField tablica, JLabel infotablica) {
+        try {
+            String text = tablica.getText();
+            if(!text.equals("")){
+                if(checkNumber(text)){
+                    int tabSize = Integer.parseInt(text);
+                    if(tabSize <= 200000000){
+                        if(tabSize != 0){
+                            creator.initializeTab(tabSize);
+                            creator.fillTheTab(tabSize);
+                            infotablica.setText("Tablica " + tabSize + " - elementowa");
+                            table = true;
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Podaj coś, co nie jest zerem");
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Podana liczba wykracza poza przyjęty, górny zakres (0 - 200 000 000)");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "To nie jest liczba, bądź wykracza poza dolny zakres");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "A może coś wpisz");
+            }
+        } catch (NumberFormatException nfe){
+            JOptionPane.showMessageDialog(null, "Podana liczba wykracza poza przyjęty, górny zakres (0 - 200 000 000)");
+        }
+        if(numbers)
+            JOptionPane.showMessageDialog(null, creator.showTab());
+    }
     private boolean checkNumber(String input){
         boolean flag = true;
         int i = 0;
@@ -202,6 +213,7 @@ public class Form extends JFrame {
         }
         return true;
     }
+
     private Creator creator;
     private SortingAlgorithm bubbleSort;
     private SortingAlgorithm quickSort;

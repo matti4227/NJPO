@@ -27,6 +27,7 @@ public class Main {
         Form form = new Form();
         form.setDefaultCloseOperation(form.EXIT_ON_CLOSE);
         form.setVisible(true);
+        form.setResizable(false);
     }
 }
 
