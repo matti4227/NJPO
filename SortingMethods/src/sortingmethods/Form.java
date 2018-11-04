@@ -48,7 +48,7 @@ public class Form extends JFrame {
         add(jPanel);
         setSize(900, 370);
         setTitle("Program sortujący tablice");
-        jLabel1.setText("<HTML>Poniżej wstaw wartości dla wielkości tablic,<BR>które mają zostać stworzone. (Nie przesadzaj)<BR>Wartości zostaną do niej losowo wygenerowane.</HTML>");
+        jLabel1.setText("<HTML>Poniżej wstaw wartości dla wielkości tablic,<BR>które mają zostać stworzone. (Nie przesadzaj.)<BR>Wartości zostaną do niej losowo wygenerowane.</HTML>");
         jLabel2.setText("<HTML>Wyniki sortowań dla:</HTML>");
         info.setText("<HTML>Poniższe na własną <BR>odpowiedzialność.<HTML>");
         t1.setFont(new Font("Courier", Font.BOLD, 14));
@@ -99,7 +99,7 @@ public class Form extends JFrame {
             }
         });
 
-        pokazCheck.addItemListener(e -> numbers = (e.getStateChange() == SELECTED));////////////////////////////////////TODO: może coś z tym
+        pokazCheck.addItemListener(e -> numbers = (e.getStateChange() == SELECTED));
 
         wyczyśćWynikiButton.addActionListener(e -> {
             bubble1.setText("");
@@ -152,13 +152,17 @@ public class Form extends JFrame {
                                 table1 = true;
                             if(which == "second")
                                 table2 = true;
-                            if(numbers)
-                                JOptionPane.showMessageDialog(null, creator.showTab("first"));
+                            try {
+                                if(numbers)
+                                    JOptionPane.showMessageDialog(null, creator.showTab("first"));
+                            } catch (OutOfMemoryError oome) {
+                                JOptionPane.showMessageDialog(null, "Przesadziłeś. Nie pokażę Ci tego.");
+                            }
                         } else {
                             JOptionPane.showMessageDialog(null, "Podaj coś, co nie jest zerem");
                         }
                     } else {
-                        JOptionPane.showMessageDialog(null, "Podana liczba wykracza poza przyjęty, górny zakres (0 - 200 000 000)");
+                        JOptionPane.showMessageDialog(null, "Podana liczba wykracza poza przyjęty, górny zakres (do 200 000 000)");
                     }
                 } else {
                     JOptionPane.showMessageDialog(null, "To nie jest liczba, bądź wykracza poza dolny zakres");
@@ -171,8 +175,12 @@ public class Form extends JFrame {
         }
     }
     private void sortTable(JLabel bubble, JLabel quick, JLabel java, boolean table, String which, String howMany) {
-        if(table)
-            creator.notifyObservers(howMany, which);
+        try {
+            if(table)
+                creator.notifyObservers(howMany, which);
+        } catch (StackOverflowError soe) {
+            JOptionPane.showMessageDialog(null, "Stack Overflow. Spróbuj ponownie.");
+        }
         if(bubbleFlag && table)
             bubble.setText(bubbleSort.getSortingDuration());
         else
@@ -186,8 +194,13 @@ public class Form extends JFrame {
         else
             java.setText("");
 
-        if(numbers)
-            JOptionPane.showMessageDialog(null, creator.showTab(which));
+        try {
+            if(numbers)
+                JOptionPane.showMessageDialog(null, creator.showTab(which));
+        } catch(OutOfMemoryError oome) {
+            JOptionPane.showMessageDialog(null, "Przesadziłeś. Nie pokażę Ci tego.");
+        }
+
     }
     private boolean checkNumber(String input){
         boolean flag = true;
@@ -206,7 +219,7 @@ public class Form extends JFrame {
         }
         return true;
     }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////TODO: wielowątkowość
     private Creator creator;
     private SortingAlgorithm bubbleSort;
     private SortingAlgorithm quickSort;
