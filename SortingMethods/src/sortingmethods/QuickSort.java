@@ -10,8 +10,6 @@ public class QuickSort extends SortingAlgorithm {
 
     private int low;
     private int high;
-    private long sortingDuration;
-    private long sortingDuration10;
 
     @Override
     void initializeTab(Tab tabToSort) { tab = tabToSort.getTab(); low = 0; high = tabToSort.getTab().length - 1; }
@@ -22,10 +20,10 @@ public class QuickSort extends SortingAlgorithm {
         long startTime = System.nanoTime();
         quickSort(tab, low, high);
         long endTime = System.nanoTime();
-        if(ile == "raz")
+        if(ile == "one")
             sortingDuration = (endTime - startTime);
-        if(ile == "dziesięć")
-            sortingDuration10 += (endTime - startTime);
+        if(ile == "ten")
+            sortingDuration += (endTime - startTime);
     }
 
     public void quickSort(int tabToSort[], int low, int high) {
@@ -61,21 +59,14 @@ public class QuickSort extends SortingAlgorithm {
         return i+1;
     }
 
+    @SuppressWarnings("Duplicates")
     @Override
     public String getSortingDuration() {
         StringBuilder sb = new StringBuilder();
-        sb.append(sortingDuration);
+        sb.append(howMany == "one" ? sortingDuration : sortingDuration/10);
         sb.append(" ns");
+        sortingDuration = 0;
         return String.valueOf(sb);
     }
 
-    @Override
-    public String getSortingDuration10() {
-        sortingDuration10 /= 10;
-        StringBuilder sb = new StringBuilder();
-        sb.append(sortingDuration10);
-        sb.append(" ns");
-        sortingDuration10 = 0;
-        return String.valueOf(sb);
-    }
 }

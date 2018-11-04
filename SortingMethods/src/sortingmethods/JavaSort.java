@@ -10,9 +10,6 @@ public class JavaSort extends SortingAlgorithm {
 
     public static JavaSort getInstance() { return instance; }
 
-    private long sortingDuration;
-    private long sortingDuration10;
-
     public JavaSort(Tab tabToSort) {
         initializeTab(tabToSort);
     }
@@ -28,27 +25,19 @@ public class JavaSort extends SortingAlgorithm {
         long startTime = System.nanoTime();
         Arrays.sort(tab);
         long endTime = System.nanoTime();
-        if(ile == "raz")
+        if(ile == "one")
             sortingDuration = (endTime - startTime);
-        if(ile == "dziesięć")
-            sortingDuration10 += (endTime - startTime);
+        if(ile == "ten")
+            sortingDuration += (endTime - startTime);
     }
 
+    @SuppressWarnings("Duplicates")
     @Override
     public String getSortingDuration() {
         StringBuilder sb = new StringBuilder();
-        sb.append(sortingDuration);
+        sb.append(howMany == "one" ? sortingDuration : sortingDuration/10);
         sb.append(" ns");
-        return String.valueOf(sb);
-    }
-
-    @Override
-    public String getSortingDuration10() {
-        sortingDuration10 /= 10;
-        StringBuilder sb = new StringBuilder();
-        sb.append(sortingDuration10);
-        sb.append(" ns");
-        sortingDuration10 = 0;
+        sortingDuration = 0;
         return String.valueOf(sb);
     }
 }

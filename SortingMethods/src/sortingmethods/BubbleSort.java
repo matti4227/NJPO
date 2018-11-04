@@ -8,9 +8,6 @@ public class BubbleSort extends SortingAlgorithm {
 
     public static BubbleSort getInstance() { return instance; }
 
-    private long sortingDuration;
-    private long sortingDuration10;
-
     @Override
     void initializeTab(Tab tabToSort) {
         tab = tabToSort.getTab();
@@ -19,9 +16,10 @@ public class BubbleSort extends SortingAlgorithm {
     @Override
     public void sort(String ile) {
 
+        howMany = ile;
         long startTime = System.nanoTime();
         int n = tab.length;
-        int temp = 0;
+        int temp;
 
         for(int i=0; i < n; i++){
             for(int j=1; j < (n-i); j++){
@@ -33,26 +31,19 @@ public class BubbleSort extends SortingAlgorithm {
             }
         }
         long endTime = System.nanoTime();
-        if(ile == "raz")
+        if(howMany == "one")
             sortingDuration = (endTime - startTime);
-        if(ile == "dziesięć")
-            sortingDuration10 += (endTime - startTime);
+        if(howMany == "ten")
+            sortingDuration += (endTime - startTime);
     }
 
+    @SuppressWarnings("Duplicates")
+    @Override
     public String getSortingDuration() {
         StringBuilder sb = new StringBuilder();
-        sb.append(sortingDuration);
+        sb.append(howMany == "one" ? sortingDuration : sortingDuration/10);
         sb.append(" ns");
-        return String.valueOf(sb);
-    }
-
-    @Override
-    public String getSortingDuration10() {
-        sortingDuration10 /= 10;
-        StringBuilder sb = new StringBuilder();
-        sb.append(sortingDuration10);
-        sb.append(" ns");
-        sortingDuration10 = 0;
+        sortingDuration = 0;
         return String.valueOf(sb);
     }
 }

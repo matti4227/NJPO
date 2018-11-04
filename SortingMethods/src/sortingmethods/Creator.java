@@ -5,16 +5,24 @@ import java.util.List;
 
 public class Creator {
     private List<SortingAlgorithm> observers = new ArrayList<>();
-    private Tab tab;
+    Tab tab1;
+    Tab tab2;
 
-    public Creator() { tab = new Tab(); }
+    public Creator() { tab1 = new Tab(); tab2 = new Tab(); }
 
-    void initializeTab(int tabSize) {
-        tab.initializeTab(tabSize);
+    void initializeTab(int tabSize, String which) {
+        if(which == "first") tab1.initializeTab(tabSize);
+        if(which == "second") tab2.initializeTab(tabSize);
     }
 
-    void fillTheTab(int tabSize) {
-        tab.fillTheTab(tabSize);
+    void fillTheTab(int tabSize, String which) {
+        if(which == "first") tab1.fillTheTab(tabSize);
+        if(which == "second") tab2.fillTheTab(tabSize);
+    }
+
+    void nullTheTab(String which) {
+        if(which == "first") tab1 = new Tab();
+        if(which == "second") tab2 = new Tab();
     }
 
     public void addAlgorithm(SortingAlgorithm algorithm) {
@@ -25,23 +33,39 @@ public class Creator {
         observers.remove(algorithm);
     }
 
-    void notifyObservers(String ile) {
-        if(ile == "raz")
-            for(SortingAlgorithm ob1: observers){
-                ob1.initializeTab(tab);
-                ob1.sort(ile);
-            }
-        if(ile == "dziesięć")
-            for(int i = 0; i < 10; i++)
-                for(SortingAlgorithm ob2: observers){
-                ob2.initializeTab(tab);
-                ob2.sort(ile);
-            }
+    void notifyObservers(String howMany, String which) {
+
+        if(howMany == "one")
+            if(which == "first")
+                for(SortingAlgorithm ob: observers){
+                    ob.initializeTab(tab1);
+                    ob.sort(howMany);
+                }
+            if(which == "second")
+                for(SortingAlgorithm ob: observers){
+                    ob.initializeTab(tab2);
+                    ob.sort(howMany);
+                }
+
+        if(howMany == "ten"){
+            if(which == "first")
+                for(int i = 0; i < 10; i++)
+                    for(SortingAlgorithm ob: observers){
+                        ob.initializeTab(tab1);
+                        ob.sort(howMany);
+                    }
+            if(which == "second")
+                for(int i = 0; i < 10; i++)
+                    for(SortingAlgorithm ob: observers){
+                        ob.initializeTab(tab2);
+                        ob.sort(howMany);
+                    }
+        }
     }
 
-    public String showTab() {
+    public String showTab(String which) {
         StringBuilder sb = new StringBuilder();
-        int []tempTab = tab.getTab();
+        int []tempTab = (which == "first" ? tab1.getTab() : tab2.getTab());
         for(int t : tempTab){
             sb.append(tempTab[t]);
             sb.append(" ");
