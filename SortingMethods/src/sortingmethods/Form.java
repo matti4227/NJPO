@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 import static java.awt.event.ItemEvent.SELECTED;
 
-public class Form extends JFrame {
+public class Form extends JFrame implements Runnable {
     private JPanel jPanel;
     private JButton stworzTab2;
     private JTextField tablica2;
@@ -59,14 +59,30 @@ public class Form extends JFrame {
         quickSort = QuickSort.getInstance();
         javaSort = JavaSort.getInstance();
 
+        sortuj1.addActionListener(e -> {
+            thread1 = new Thread(this::run);
+            thread1.start();
+            sort1 = true;
+        });
+        sortuj2.addActionListener(e -> {
+            thread2 = new Thread(this::run);
+            thread2.start();
+            sort2 = true;
+        });
+
+        sortuj1_10.addActionListener(e -> {
+            thread101 = new Thread(this::run);
+            thread101.start();
+            sort101 = true;
+        });
+        sortuj2_10.addActionListener(e -> {
+            thread102 = new Thread(this::run);
+            thread102.start();
+            sort102 = true;
+        });
+
         stworzTab1.addActionListener(e -> createTable(tablica1, infoTablica1, "first"));
         stworzTab2.addActionListener(e -> createTable(tablica2, infoTablica2, "second"));
-
-        sortuj1.addActionListener(e -> sortTable(bubble1, quick1, java1, table1, "first", "one"));
-        sortuj2.addActionListener(e -> sortTable(bubble2, quick2, java2, table2, "second", "one"));
-
-        sortuj1_10.addActionListener(e -> sortTable(bubble1_10, quick1_10, java1_10, table1, "first", "ten"));
-        sortuj2_10.addActionListener(e -> sortTable(bubble2_10, quick2_10, java2_10, table2, "second", "ten"));
 
         bubbleCheck.addItemListener(e -> {
             if(e.getStateChange() == SELECTED) {
@@ -129,6 +145,7 @@ public class Form extends JFrame {
                 infoTablica2.setText("");
             }
         });
+
         infoOProgramieButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -165,7 +182,7 @@ public class Form extends JFrame {
                         JOptionPane.showMessageDialog(null, "Podana liczba wykracza poza przyjęty, górny zakres (do 200 000 000)");
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "To nie jest liczba, bądź wykracza poza dolny zakres");
+                    JOptionPane.showMessageDialog(null, "To nie jest liczba całkowita, bądź wykracza poza dolny zakres");
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "A może coś wpisz");
@@ -174,23 +191,31 @@ public class Form extends JFrame {
             JOptionPane.showMessageDialog(null, "Podana liczba wykracza poza przyjęty, górny zakres (0 - 200 000 000)");
         }
     }
-    private void sortTable(JLabel bubble, JLabel quick, JLabel java, boolean table, String which, String howMany) {
+    private void sortTable(JLabel bubble, JLabel quick, JLabel java, boolean table, String which, String howMany) throws InterruptedException {
         try {
             if(table)
                 creator.notifyObservers(howMany, which);
         } catch (StackOverflowError soe) {
             JOptionPane.showMessageDialog(null, "Stack Overflow. Spróbuj ponownie.");
         }
-        if(bubbleFlag && table)
+        if(bubbleFlag && table) {
             bubble.setText(bubbleSort.getSortingDuration());
-        else
+            Thread.sleep(300);
+        }
+        else {
             bubble.setText("");
-        if(quickFlag && table)
+        }
+        if(quickFlag && table) {
             quick.setText(quickSort.getSortingDuration());
-        else
+            Thread.sleep(300);
+        }
+        else {
             quick.setText("");
-        if(javaFlag && table)
+        }
+        if(javaFlag && table) {
             java.setText(javaSort.getSortingDuration());
+            Thread.sleep(300);
+        }
         else
             java.setText("");
 
@@ -219,7 +244,7 @@ public class Form extends JFrame {
         }
         return true;
     }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////TODO: wielowątkowość
+
     private Creator creator;
     private SortingAlgorithm bubbleSort;
     private SortingAlgorithm quickSort;
@@ -230,4 +255,54 @@ public class Form extends JFrame {
     private boolean table1 = false;
     private boolean table2 = false;
     private boolean numbers;
+    private boolean sort1 = false;
+    private boolean sort2 = false;
+    private boolean sort101 = false;
+    private boolean sort102 = false;
+    Thread thread1;
+    Thread thread2;
+    Thread thread101;
+    Thread thread102;
+
+    @Override
+    public void run() {
+        synchronized (this) {
+            if(sort1 == true){
+                try {
+                    Thread.sleep(100);
+                    sortTable(bubble1, quick1, java1, table1, "first", "one");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                sort1 = false;
+            }
+            if(sort101 == true){
+                try {
+                    Thread.sleep(100);
+                    sortTable(bubble1_10, quick1_10, java1_10, table1, "first", "ten");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                sort101 = false;
+            }
+            if(sort2 == true){
+                try {
+                    Thread.sleep(100);
+                    sortTable(bubble2, quick2, java2, table2, "second", "one");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                sort2 = false;
+            }
+            if(sort102 == true){
+                try {
+                    Thread.sleep(100);
+                    sortTable(bubble2_10, quick2_10, java2_10, table2, "second", "ten");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                sort102 = false;
+            }
+        }
+    }
 }

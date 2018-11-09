@@ -10,7 +10,10 @@ public class BubbleSort extends SortingAlgorithm {
 
     @Override
     void initializeTab(Tab tabToSort) {
-        tab = tabToSort.getTab();
+        int[] temp = tabToSort.getTab();
+        tab = new int[temp.length];
+        for(int i = 0; i < tab.length; i++)
+            tab[i] = temp[i];
     }
 
     @Override

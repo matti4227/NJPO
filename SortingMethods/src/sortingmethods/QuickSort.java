@@ -12,11 +12,19 @@ public class QuickSort extends SortingAlgorithm {
     private int high;
 
     @Override
-    void initializeTab(Tab tabToSort) { tab = tabToSort.getTab(); low = 0; high = tabToSort.getTab().length - 1; }
+    void initializeTab(Tab tabToSort) {
+        int[] temp = tabToSort.getTab();
+        tab = new int[temp.length];
+        for(int i = 0; i < tab.length; i++)
+            tab[i] = temp[i];
+        low = 0;
+        high = tabToSort.getTab().length - 1;
+    }
 
     @Override
     public void sort(String ile) {
 
+        howMany = ile;
         long startTime = System.nanoTime();
         quickSort(tab, low, high);
         long endTime = System.nanoTime();

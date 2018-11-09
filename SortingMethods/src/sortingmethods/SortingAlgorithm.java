@@ -6,5 +6,5 @@ public abstract class SortingAlgorithm {
     protected long sortingDuration;
     abstract void initializeTab(Tab tabToSort);
     public abstract void sort(String ile);
-    public abstract String getSortingDuration();//////////////////////////////////////////////////////////////////////////TODO: więcej algorytmów
+    public abstract String getSortingDuration();
 }

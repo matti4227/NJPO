@@ -25,45 +25,45 @@ public class Creator {
         if(which == "second") tab2 = new Tab();
     }
 
-    public void addAlgorithm(SortingAlgorithm algorithm) {
+    void addAlgorithm(SortingAlgorithm algorithm) {
         observers.add(algorithm);
     }
 
-    public void removeAlgorithm(SortingAlgorithm algorithm) {
+    void removeAlgorithm(SortingAlgorithm algorithm) {
         observers.remove(algorithm);
     }
 
     void notifyObservers(String howMany, String which) {
 
-        if(howMany == "one")
+        if(howMany == "one") {
             if(which == "first")
-                for(SortingAlgorithm ob: observers){
+                for(SortingAlgorithm ob: observers) {
                     ob.initializeTab(tab1);
                     ob.sort(howMany);
                 }
             if(which == "second")
-                for(SortingAlgorithm ob: observers){
+                for(SortingAlgorithm ob: observers) {
                     ob.initializeTab(tab2);
                     ob.sort(howMany);
                 }
-
-        if(howMany == "ten"){
+        }
+        if(howMany == "ten") {
             if(which == "first")
                 for(int i = 0; i < 10; i++)
-                    for(SortingAlgorithm ob: observers){
+                    for(SortingAlgorithm ob: observers) {
                         ob.initializeTab(tab1);
                         ob.sort(howMany);
                     }
             if(which == "second")
                 for(int i = 0; i < 10; i++)
-                    for(SortingAlgorithm ob: observers){
+                    for(SortingAlgorithm ob: observers) {
                         ob.initializeTab(tab2);
                         ob.sort(howMany);
                     }
         }
     }
 
-    public String showTab(String which) {
+    String showTab(String which) {
         StringBuilder sb = new StringBuilder();
         int []tempTab = (which == "first" ? tab1.getTab() : tab2.getTab());
         for(int t : tempTab){
