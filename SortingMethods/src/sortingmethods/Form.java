@@ -149,7 +149,7 @@ public class Form extends JFrame implements Runnable {
         infoOProgramieButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JOptionPane.showMessageDialog(null, "<HTML>Program sortuje tablicy i podaje czas sortowań w nanosekundach.<BR><BR>Użyto wzorców projektowych:<BR>-Observer<BR>-Singleton<BR>-Delegate</HTML>");
             }
         });//////////////////////////////////////////////TODO: wstawić informacje o programie
     }
